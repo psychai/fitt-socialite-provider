@@ -1,7 +1,7 @@
 # fitt Socialite Provider
 
 ```bash
-composer require psych-ai/fitt-socialite-provider
+composer require psychai/fitt-socialite-provider
 ```
 
 ## Installation & Basic Usage
