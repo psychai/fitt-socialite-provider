@@ -24,7 +24,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return urldecode($this->buildAuthUrlFromBase($this->getBaseUrl().'/my-portal/oauth2/authorize', $state));
+        return urldecode($this->buildAuthUrlFromBase($this->getBaseUrl().'/oauth2/authorize', $state));
     }
 
     /**
@@ -32,7 +32,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return $this->getBaseUrl().'/my-portal/oauth2/access';
+        return $this->getBaseUrl().'/oauth2/access';
     }
 
     /**
@@ -41,7 +41,7 @@ class Provider extends AbstractProvider
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()->get(
-            $this->getBaseUrl().'/my-portal/oauth2/person?access_token=' . $token,
+            $this->getBaseUrl().'/oauth2/person?access_token=' . $token,
             [
                 'headers' => [
                     'Accept' => 'application/json',
